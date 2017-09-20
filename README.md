@@ -228,7 +228,7 @@ RMStore delegates receipt verification, enabling you to provide your own impleme
 
 ```objective-c
 - (void)verifyTransaction:(SKPaymentTransaction*)transaction
-                           success:(void (^)())successBlock
+                           success:(void (^)(void))successBlock
                            failure:(void (^)(NSError *error))failureBlock;
 ```
 
@@ -252,7 +252,7 @@ RMStore delegates the downloading of self-hosted content via the optional `conte
 
 ```objective-c
 - (void)downloadContentForTransaction:(SKPaymentTransaction*)transaction
-                              success:(void (^)())successBlock
+                              success:(void (^)(void))successBlock
                              progress:(void (^)(float progress))progressBlock
                               failure:(void (^)(NSError *error))failureBlock;
 ```
